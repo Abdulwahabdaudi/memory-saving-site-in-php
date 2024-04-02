@@ -1,0 +1,290 @@
+:root {
+  --color-white: #f1f3f1;
+  --color-background: #e0dada;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  border: 0;
+  appearance: none;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+  background-color: var(--color-background);
+  overflow-x: hidden;
+}
+a {
+  color: inherit;
+}
+button{
+  padding: 10px;
+  border-radius: 20px;
+  width: 100px;
+  font-weight: bold;
+  color: #f1f3f1;
+}
+button:hover{
+  background-color: #bab7e2;
+}
+
+
+.container {
+  width: 95%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------ NAVBAR -------- */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  width: 100%;
+  background-color: var(--color-white);
+  box-shadow: 0 15px 45px #bab7e2;
+  padding: 5px 10px;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+.nav-header {
+  display: flex;
+}
+.nav-header p {
+  margin-top: auto;
+  padding-left: 30px;
+  color: #333232;
+  font-weight: 900;
+}
+.brand {
+  color: rgb(19, 19, 135);
+}
+.brand span {
+  color: #980909;
+}
+main {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #999898;
+  border-radius: 5px;
+}
+main .header {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.card {
+  background-color: var(--color-white);
+  box-shadow: 0 15px 45px #bab7e2;
+  border-radius: 6px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.card .main{
+  display: grid;
+  grid-template-columns: 25% auto;
+  gap: 10px;
+  padding: 10px;
+}
+.card .card-header {
+  text-align: center;
+  background-color: #bbb5d8;
+  padding: 15px 0;
+  border-radius: 6px 6px 0 0;
+}
+.card .card-body {
+  display: flex;
+  gap: 10px;
+  padding: 10px 20px;
+}
+.card .card-body i {
+  font-size: 100px;
+  margin-left: auto;
+  color: blueviolet;
+}
+.card .card-body h3 {
+  display: flex;
+  align-items: center;
+}
+
+.profile img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: rgb(206, 26, 26);
+}
+.photo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.photo img{
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  background-color: rgb(24, 20, 20);
+}
+
+
+.card .content p{
+  font-style: italic;
+  color: #494949;
+  margin: 5px;
+
+}
+
+.card .action{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(219, 218, 218);
+  padding: 10px;
+  gap: 50px;
+  border-radius: 0 0 5px 5px;
+}
+
+.action .edit{
+ background-color:rgb(94, 94, 192) ;
+}
+.action .delete{
+ background-color:rgb(185, 24, 24) ;
+}
+.action .add{
+ background-color:rgb(34, 138, 31) ;
+}
+
+footer p{
+  text-align: center;
+  padding: 30px;
+  border-radius: 5px;
+}
+footer{
+  margin-top: auto;
+}
+
+form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  
+}
+
+input[type="text"],
+input[type="place"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #1403fd;
+  border-radius: 4px;
+}
+
+input[type="file"]{
+  padding: 10px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #1403fd;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #3a2fcc;
+  transform: scale(0.98);
+}
+
+
+
+
+
+
+
+
+#backdrop {
+  display: none; /* Initially hide the backdrop */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  z-index: 998; /* Ensure backdrop is behind the spinner but above other elements */
+}
+
+
+#spinner-container {
+  display: none; /* Initially hide the container */
+  position: fixed; /* Position the spinner in the center */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the spinner */
+  z-index: 999; /* Ensure spinner is above other elements */
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top-color: #3498db; /* Color for the spinning element */
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+
+.popup-message {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #a1a1a1;
+  color: #000000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.popup-message.active {
+  opacity: 1;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translate(-50%, 100%);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
